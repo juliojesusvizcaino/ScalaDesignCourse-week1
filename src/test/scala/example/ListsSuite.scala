@@ -36,7 +36,7 @@ import org.scalatest.junit.JUnitRunner
    * which tests that its argument evaluates to `true`. So one of the simplest
    * successful tests is the following:
    */
-  test("one plus one is two")(assert(1 + 1 == 2))
+  test("one plus one is two")(assert(1 + 1 === 2))
 
 
   /**
@@ -45,8 +45,8 @@ import org.scalatest.junit.JUnitRunner
    *
    * This allows tests to be written in a more readable manner:
    */
-  test("one plus one is three?") {
-    assert(1 + 1 == 3) // This assertion fails! Go ahead and fix it.
+  test("one plus two is three") {
+    assert(1 + 2 === 3) // This assertion fails! Go ahead and fix it.
   }
 
 
@@ -71,7 +71,7 @@ import org.scalatest.junit.JUnitRunner
    * We recommend to always use the `===` equality operator when writing tests.
    */
   test("details why one plus one is not three") {
-    assert(1 + 1 === 3) // Fix me, please!
+    assert(1 + 2 === 3) // Fix me, please!
   }
 
   /**
