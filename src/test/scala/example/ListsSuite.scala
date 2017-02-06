@@ -122,6 +122,12 @@ import org.scalatest.junit.JUnitRunner
     assert(max(List(3, 7, 2)) === 7)
   }
 
+  test("max of empty List") {
+    intercept[NoSuchElementException] {
+      max(List())
+    }
+  }
+
 
 
 }
